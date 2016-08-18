@@ -12,7 +12,7 @@ Disqus for Accelerated Mobile Pages (AMP) is a fast-loading, optimized Disqus ex
 
 1. Create and host the following Universal Code file on a different domain than which you intend to load Disqus for AMP This will be the URL that you will provide to the `src` attribute in step 2 below.
 
-```html
+    ```html
 <div id="disqus_thread"></div>
 <script>
 window.addEventListener("message", receiveMessage, false);
@@ -58,7 +58,7 @@ function receiveMessage(event)
 
 2. Place the following `<amp-iframe>` element anywhere within the <body> of your AMP page. It will likely make sense to place it at the end of your article content, where ever you would your audience should engage further after reading.
 
-```html
+    ```html
 <amp-iframe width=600 height=140
             layout="responsive"
             sandbox="allow-scripts allow-same-origin allow-modals allow-popups"
@@ -70,5 +70,3 @@ function receiveMessage(event)
 3. Replace `hash` with a unique identifier that represents the page where you’d like a specific thread to display. If you are loading the `<amp-iframe>` element on multiple pages, generate the `hash` dynamically for each page. The hash you provide will be used in the `identifier` and `url` variables in step 1.
 
 4. Add the new domain as a Trusted Domain in your Admin > Settings > [Advanced](https://39898u7123873120.disqus.com/admin/settings/advanced/).
-
-~~Note that we recommend specifying the correct shortname, url, and identifier variables so that Disqus loads the correct forum and discussion for your. Read more about configuration variables.~~
