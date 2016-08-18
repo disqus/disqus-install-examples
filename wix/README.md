@@ -1,0 +1,1 @@
+# Wix installation examples

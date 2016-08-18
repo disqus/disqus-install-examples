@@ -1,0 +1,1 @@
+# Squarespace installation examples

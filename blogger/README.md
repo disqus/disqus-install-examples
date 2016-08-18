@@ -1,0 +1,1 @@
+# Blogger installation instructions

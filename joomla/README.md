@@ -1,0 +1,1 @@
+# Joomla installation examples

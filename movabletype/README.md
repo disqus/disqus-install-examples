@@ -1,0 +1,1 @@
+# Movable Type installation examples
