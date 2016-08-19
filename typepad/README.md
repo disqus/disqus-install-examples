@@ -41,10 +41,12 @@
 	```
 
 6. Replace `EXAMPLE` with your shortname.
-7. On the left sidebar select **Custom CSS** and copy and paste the following code. 
+7. On the left sidebar select **Custom CSS** and copy and paste the following code.
+
 	```
 	# all-comments { display: none !important; } .comments-open { display: none !important; }
 	```
+
 8. Save your changes.
 
 [Continue to the getting started guide](https://help.disqus.com/customer/portal/articles/1264625-getting-started) 
