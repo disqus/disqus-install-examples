@@ -1,4 +1,4 @@
-# Joomla installation examples
+# Joomla installation instructions
 
 1. Download the [Disqus for Joomla plug-in](http://extensions.joomla.org/extensions/5259/details).
 2. In your Joomla admin select **Extension Manager**.

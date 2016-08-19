@@ -1,4 +1,4 @@
-# Universal Code installation examples
+# Universal Code installation instructions
 
 1. Place the following code where you'd like Disqus to load:
 

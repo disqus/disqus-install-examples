@@ -1,4 +1,4 @@
-# WordPress installation examples
+# WordPress installation instructions
 
 **Note:** These instructions are for self-hosted [WordPress.org](https://wordpress.org/) sites. Disqus cannot be installed on [WordPress.com](https://wordpress.com/) sites. [Learn more](https://help.disqus.com/customer/en/portal/articles/663013).
   

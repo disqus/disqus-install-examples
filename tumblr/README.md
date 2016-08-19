@@ -1,4 +1,4 @@
-# Tumblr installation examples
+# Tumblr installation instructions
 
 1. In Tumblr, visit **[Account icon > Edit Appearance > Edit Theme](http://www.tumblr.com/customize)**
 2. In the shortname field, enter your shortname.

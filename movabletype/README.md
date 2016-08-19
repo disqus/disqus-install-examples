@@ -1,4 +1,4 @@
-# Movable Type installation examples
+# Movable Type installation instructions
 
 1. [Sign up to download the plugin](http://disqus.com/admin/signup/)
 2. Unpack the archive to the `/path/to/movabletype` directory inside of Movable Type.  **Important:** Maintain the directory structure of the archive. All extracted files should exist in:

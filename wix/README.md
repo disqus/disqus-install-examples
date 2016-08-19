@@ -1,4 +1,4 @@
-# Wix installation examples
+# Wix installation instructions
 
 1. Click **My Blog** icon ("B") in the left sidebar of the Editor.
 2. Click **Blog Pages**.

@@ -1,4 +1,4 @@
-# Squarespace installation examples
+# Squarespace installation instructions
 
 1. Navigate to your Squarespace **Settings > Blogging** page.
 2. In the Disqus shortname field, enter your shortname.

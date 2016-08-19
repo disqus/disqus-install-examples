@@ -1,4 +1,4 @@
-# Typepad installation examples
+# Typepad installation instructions
 
 1. In your TypePad dashboard select **Design**.
 2. On the left sidebar select **Content**.

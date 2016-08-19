@@ -1,1 +1,1 @@
-# Disqus installation examples
+# Disqus installation instructions
