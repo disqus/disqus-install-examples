@@ -10,7 +10,7 @@ Disqus for Accelerated Mobile Pages (AMP) is a fast-loading, optimized Disqus ex
 
 ## How to install
 
-1. Create and host the following Universal Code file on a different domain than which you intend to load Disqus for AMP This will be the URL that you will provide to the `src` attribute in step 2 below.
+1. Create and host the following Universal Code file on a different domain than where you intend to load Disqus for AMP. This will be the URL that you will provide to the `src` attribute in step 2 below.
 
     ```html
     <div id="disqus_thread"></div>
