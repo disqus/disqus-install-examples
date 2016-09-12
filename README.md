@@ -22,8 +22,8 @@ Usage will depend on the platform. See each platform's README.md file which will
 
 ### Native apps
 
-- [Android](/android/)
-- [iOS](/ios/)
+- Android (Coming soon)
+- iOS (Coming soon)
 - [Windows UWP](/windows-uwp/)
 
 ### Misc. integrations
