@@ -19,13 +19,15 @@ Disqus for Accelerated Mobile Pages (AMP) is a fast-loading, optimized Disqus ex
     function receiveMessage(event)
     {
         if (event.data) {
-            console.log(event.data);
+            var msg;
             try {
-                JSON.parse(event.data);
-            } catch (e) {
-                return false;
+                msg = JSON.parse(event.data);
+            } catch (err) {
+                // Do nothing
             }
-            var msg = JSON.parse(event.data);
+            if (!msg)
+                return false;
+
             if (msg.name == 'resize') {
                 window.parent.postMessage({
                   sentinel: 'amp',
