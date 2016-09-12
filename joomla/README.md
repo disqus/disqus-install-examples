@@ -5,3 +5,5 @@
 3. Upload the Disqus plugin.
 4. Under the Extensions menu choose **Plug-in Manager**.
 5. In the Disqus subdomain field, enter your shortname.
+
+[Continue to the getting started guide](https://help.disqus.com/customer/portal/articles/1264625-getting-started).

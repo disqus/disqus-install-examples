@@ -11,3 +11,5 @@
 9. Click **Update**.
 
 **Note:** Disqus comments can only be used on your live site and not within the editor. To test your Disqus comments, you must publish your site, after setting up Disqus comments.
+
+[Continue to the getting started guide](https://help.disqus.com/customer/portal/articles/1264625-getting-started).

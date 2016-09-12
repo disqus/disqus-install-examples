@@ -71,3 +71,5 @@ Disqus for Accelerated Mobile Pages (AMP) is a fast-loading, optimized Disqus ex
 
 3. Replace `hash` with a unique identifier that represents the page where you’d like a specific thread to display. If you are loading the `<amp-iframe>` element on multiple pages, generate the `hash` dynamically for each page. The hash you provide will be used in the `identifier` and `url` variables in step 1.
 4. Add the new domain as a Trusted Domain in your Admin > Settings > [Advanced](https://39898u7123873120.disqus.com/admin/settings/advanced/).
+
+[Continue to the getting started guide](https://help.disqus.com/customer/portal/articles/1264625-getting-started).

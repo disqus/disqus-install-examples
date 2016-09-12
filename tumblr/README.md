@@ -5,3 +5,5 @@
 3. Save your theme and you're done.
 
 **Note:** If your Tumblr theme does not have built-in Disqus support, you can [install Disqus manually](https://help.disqus.com/customer/portal/articles/758168-tumblr-manual-installation-instructions).
+
+[Continue to the getting started guide](https://help.disqus.com/customer/portal/articles/1264625-getting-started).

@@ -7,3 +7,5 @@
 3. Select **Install Now** > **Activate Plugin**
 4. Proceed with the onscreen install instructions.
 5. Log into your Disqus account, then choose the forum shortname you would like to install.
+
+[Continue to the getting started guide](https://help.disqus.com/customer/portal/articles/1264625-getting-started).

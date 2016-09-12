@@ -29,6 +29,8 @@
 
 2. (Recommended) Edit the `RECOMMENDED CONFIGURATION VARIABLES` section using your CMS or platform's dynamic values. See our [documentation](https://help.disqus.com/customer/en/portal/articles/2158629) to learn why defining `identifier` and `url` is important for preventing duplicate threads.
 
+[Continue to the getting started guide](https://help.disqus.com/customer/portal/articles/1264625-getting-started).
+
 ## How to display comment count
 
 1. Place the following code before your site's closing `</body>` tag:

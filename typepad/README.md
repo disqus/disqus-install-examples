@@ -49,4 +49,4 @@
 
 8. Save your changes.
 
-[Continue to the getting started guide](https://help.disqus.com/customer/portal/articles/1264625-getting-started) 
+[Continue to the getting started guide](https://help.disqus.com/customer/portal/articles/1264625-getting-started).

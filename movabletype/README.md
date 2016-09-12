@@ -8,3 +8,5 @@
 6. In the **Settings** tab, choose **Install DISQUS**
 7. Follow the walkthrough setup process. In the shortname field, enter your shortname.
 8. Choose **Publish Site** and publish all files.
+
+[Continue to the getting started guide](https://help.disqus.com/customer/portal/articles/1264625-getting-started).

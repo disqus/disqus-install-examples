@@ -6,3 +6,5 @@
 4. Visit **Administer > Site configuration > Disqus**.
 5. In the shortname field, enter your shortname.
 6. Visit **Administer > User Management > Permissions** and enable the "View Disqus Comments" permission.
+
+[Continue to the getting started guide](https://help.disqus.com/customer/portal/articles/1264625-getting-started).
