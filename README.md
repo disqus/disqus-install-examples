@@ -35,3 +35,12 @@ Usage will depend on the platform. See each platform's README.md file which will
 ## Contributing
 
 With all the various web publishing platforms, it's impossible for us to cover them all. We need your help! We welcome all contributions - from small enhancements to full examples.
+
+All contributions that include full examples should do the following:
+
+1. Add a new example in its own folder, using hyphens `-` for separating words.
+2. Inside that folder, include a full, running example if applicable.
+3. Include a README.md file with instructions detailing how to use and/or run the example.
+4. Update this root README.md file with a link to the instruction in the correct category.
+
+Note: These contribution guidelines are still evolving and may change as we figure out what works best.
