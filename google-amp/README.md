@@ -10,7 +10,7 @@ Disqus for Accelerated Mobile Pages (AMP) is a fast-loading, optimized Disqus ex
 
 ## How to install
 
-1. Create and host the following Universal Code file on a different domain than where you intend to load Disqus for AMP. This will be the URL that you will provide to the `src` attribute in step 2 below.
+1. Create and host the following Universal Code file on a different domain than where you intend to load Disqus for AMP. This will be the URL that you will provide to the `src` attribute in step 3 below.
 
     ```html
     <div id="disqus_thread"></div>
@@ -58,7 +58,14 @@ Disqus for Accelerated Mobile Pages (AMP) is a fast-loading, optimized Disqus ex
     </script>
     ```
 
-2. Place the following `<amp-iframe>` element anywhere within the <body> of your AMP page. It will likely make sense to place it at the end of your article content, where ever you would your audience should engage further after reading.
+2. Refer to the `amp-frame` [documentation](https://www.ampproject.org/docs/reference/extended/amp-iframe.html) and add the required `amp-iframe` script to your document's `<head>`. :
+    
+    ```html
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+
+    ```
+
+3. Place the following `<amp-iframe>` element anywhere within the <body> of your AMP page. It will likely make sense to place it at the end of your article content, where ever you would your audience should engage further after reading.
 
     ```html
     <amp-iframe width=600 height=140
@@ -69,7 +76,7 @@ Disqus for Accelerated Mobile Pages (AMP) is a fast-loading, optimized Disqus ex
     </amp-iframe>
     ```
 
-3. Replace `hash` with a unique identifier that represents the page where you’d like a specific thread to display. If you are loading the `<amp-iframe>` element on multiple pages, generate the `hash` dynamically for each page. The hash you provide will be used in the `identifier` and `url` variables in step 1.
-4. Add the new domain as a Trusted Domain in your Admin > Settings > [Advanced](https://39898u7123873120.disqus.com/admin/settings/advanced/).
+4. Replace `hash` with a unique identifier that represents the page where you’d like a specific thread to display. If you are loading the `<amp-iframe>` element on multiple pages, generate the `hash` dynamically for each page. The hash you provide will be used in the `identifier` and `url` variables in step 1.
+5. Add the new domain as a Trusted Domain in your Admin > Settings > [Advanced](https://39898u7123873120.disqus.com/admin/settings/advanced/).
 
 [Continue to the getting started guide](https://help.disqus.com/customer/portal/articles/1264625-getting-started).
