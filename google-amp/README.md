@@ -58,7 +58,7 @@ Disqus for Accelerated Mobile Pages (AMP) is a fast-loading, optimized Disqus ex
     </script>
     ```
 
-2. Refer to the `amp-frame` [documentation](https://www.ampproject.org/docs/reference/extended/amp-iframe.html) and add the required `amp-iframe` script to your document's `<head>`. :
+2. Refer to the `amp-iframe` [documentation](https://www.ampproject.org/docs/reference/extended/amp-iframe.html) and add the required `amp-iframe` script to your document's `<head>`. :
     
     ```html
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
