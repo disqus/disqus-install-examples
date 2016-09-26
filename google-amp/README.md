@@ -70,7 +70,7 @@ Disqus for Accelerated Mobile Pages (AMP) is a fast-loading, optimized Disqus ex
     ```html
     <amp-iframe width=600 height=140
                 layout="responsive"
-                sandbox="allow-scripts allow-same-origin allow-modals allow-popups"
+                sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
                 resizable
                 src="https://example.com/amp#hash">
     </amp-iframe>
