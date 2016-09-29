@@ -19,6 +19,12 @@ Usage will depend on the platform. See each platform's README.md file which will
 - [Typepad](/typepad/)
 - [Wix](/wix/)
 - [WordPress](/wordpress/)
+- [Strikingly](/strikingly/)
+- [Jekyll](/jekyll/)
+- [Ghost](/ghost/)
+- [Hubspot](/hubspot/)
+- [Shopify](/shopify/)
+- [Adobe Muse](/adobemuse/)
 
 ### Native apps
 
