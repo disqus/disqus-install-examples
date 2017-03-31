@@ -1,101 +1,102 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <style type="text/css">
-        #disqus-container {
-            width: 33%;
-            right: 0;
-            top: 0;
-            position: absolute;
-        }
-    </style>
-    </head>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="//media.disquscdn.com/disqus-install-examples/assets/css/kube.min.css" />
+<style>
+    #container {
+        margin: auto;
+        max-width: 1128px;
+        padding: 12px;
+    }
+
+    #disqus_thread {
+        margin-top: 10px;
+    }
+
+    #disqus-sidebar-backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #333;
+        opacity: 0.5;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    #disqus-sidebar-backdrop.hidden {
+        display: none;
+    }
+
+    #disqus-sidebar-backdrop.visible {
+        display: block;
+    }
+
+    #disqus-sidebar-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background: #fff;
+        padding: 12px;
+        width: 33%;
+        border-left: 2px solid #999;
+        transition: right 0.5s ease-in-out;
+    }
+
+    #disqus-sidebar-container.hidden {
+        right: -33%;
+    }
+
+    #disqus-sidebar-container.visible {
+        right: 0;
+    }
+</style>
+</head>
+
     <body>
         <div id="container" style="width: 100%">
-            <h1>Embed Test</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
-            <button id="disqus-button">View Comments in Sidebar</button>
+            <h1>Sidebar Template</h1>
+            <p>Similar to preloading before a click, load the Disqus Universal Code into a sidebar <code>&lt;div/&gt;</code> that is hidden by default and is unhidden after user interaction like a click. Use <code>display: none</code> on the parent <code>&lt;div/&gt;</code> so that Disqus can detect it is hidden and prevent expected results.</p>
+            <button id="disqus-button">Show Comments</button>
         </div>
-        <div id="disqus-container" style="display: none;">
+
+        <div id="disqus-sidebar-backdrop" class="hidden"></div>
+        <div id="disqus-sidebar-container" class="hidden">
             <div id="disqus_thread"></div>
             <script>
                 /**
-                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                 */
-                
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                */
+
                 var disqus_config = function () {
                     this.page.url = 'https://example.com';  // Replace PAGE_URL with your page's canonical URL variable
                     this.page.identifier = 'example'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                     this.page.title = 'Title example';
                 };
-                
+
                 (function() {  // DON'T EDIT BELOW THIS LINE
                     var d = document, s = d.createElement('script');
-                    
                     s.src = '//kaffepausen.disqus.com/embed.js';
-                    
                     s.setAttribute('data-timestamp', +new Date());
                     (d.head || d.body).appendChild(s);
                 })();
 
-                // Hide and show Diqus using `display: none` on the parent container.
-                document.getElementById("disqus-button").onclick = function(event) {
-                    var disqusContainer = document.getElementById("disqus-container")
-                    var container = document.getElementById("container")
-                    disqusContainer.style.display = disqusContainer.style.display === '' ? 'none' : ''
-                    container.style.width = container.style.width === '66%' ? '100%' : '66%'
-                }
+                var doc = window.document;
+                var isHidden = true;
+                var container = doc.getElementById('disqus-sidebar-container');
+                var button = doc.getElementById('disqus-button');
+                var backdrop = doc.getElementById('disqus-sidebar-backdrop');
+                var toggleDisqusSidebar = function () {
+                    backdrop.className = isHidden ? 'visible' : 'hidden';
+                    container.className = isHidden ? 'visible' : 'hidden';
+                    isHidden = !isHidden;
+                };
+                backdrop.onclick = toggleDisqusSidebar;
+                button.onclick = toggleDisqusSidebar;
             </script>
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        </div>        
+        </div>
     </body>
 </html>
