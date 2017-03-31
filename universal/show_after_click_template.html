@@ -53,8 +53,9 @@
 
     // Hide and show the container div upon click where you have placed Disqus
     var isHidden = true;
-    var button = window.document.getElementById('disqus-button');
-    var container = document.getElementById('disqus-container');
+    var doc = window.document;
+    var button = doc.getElementById('disqus-button');
+    var container = doc.getElementById('disqus-container');
     button.onclick = function (event) {
         container.style.display = isHidden ? 'block' : 'none'
         button.innerHTML = isHidden ? 'Hide Comments' : 'Show Comments';
