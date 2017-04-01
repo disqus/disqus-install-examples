@@ -47,22 +47,23 @@ Disqus is designed to load at the bottom of your post content, but it is flexibl
 
 ### [Infinite scroll](/infinite_scroll_template.html)
 
-- Remove `<div id="disqus_thread"></div>` from the previous article DOM before reloading Disqus in the new article. Disqus should only appear 1 time on the page.
-- Use the [`DISQUS.reset()` function](https://help.disqus.com/customer/en/portal/articles/472107-using-disqus-on-ajax-sites) to reload a new Disqus thread after your page's content has updated.
+Removes `<div id="disqus_thread"></div>` from the previous article DOM before reloading Disqus in the new article. Disqus should only appear 1 time on the page. Uses the [`DISQUS.reset()` function](https://help.disqus.com/customer/en/portal/articles/472107-using-disqus-on-ajax-sites) to reload a new Disqus thread after your page's content has updated.
 
 ### [Load after click](/load_after_click_template.html)
 
-- Use an event handler like `.onclick` to refer to an anonymous function where you can place the Disqus [Universal Code](https://disqus.com/admin/universalcode/).
+Use an event handler like `.onclick` to refer to an anonymous function where you can place the Disqus [Universal Code](https://disqus.com/admin/universalcode/).
 
 ### [Show after click](/show_after_click_template.html)
 
-- Load the Disqus [Universal Code](https://disqus.com/admin/universalcode/) into a `<div>` that is hidden by default and is unhidden after user interaction like a click.
-- Use `display: none` on the parent `<div>` so that Disqus can detect it is hidden and prevent expected results.
+Loads the Disqus [Universal Code](https://disqus.com/admin/universalcode/) into a `<div>` that is hidden by default and is unhidden after user interaction like a click. Uses `display: none` on the parent `<div>` so that Disqus can detect it is hidden and prevent expected results.
 
 ### [Sidebar](/sidebar_template.html)
 
-- Similar to preloading before a click, load the Disqus [Universal Code](https://disqus.com/admin/universalcode/) into a sidebar `<div>` that is hidden by default and is unhidden after user interaction like a click.
-- Use `display: none` on the parent `<div>` so that Disqus can detect it is hidden and prevent expected results.
+Similar to preloading before a click, load the Disqus [Universal Code](https://disqus.com/admin/universalcode/) into a sidebar `<div>` that is hidden by default and is unhidden after user interaction like a click. Uses `display: none` on the parent `<div>` so that Disqus can detect it is hidden and prevent expected results.
+
+### [Lazy load](/lazy_load_template.html)
+
+Defers loading Disqus until the user has brought comments into view. This is check is triggered after loading, when the user scrolls, and when the window size changes.
 
 #### Site Examples
 - [The Atlantic](https://www.theatlantic.com/technology/archive/2017/03/trump-android-tweets/520869/) (Load after click)
