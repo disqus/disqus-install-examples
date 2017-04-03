@@ -45,6 +45,10 @@
 
 Disqus is designed to load at the bottom of your post content, but it is flexible and can be loaded in a variety of different layouts and with different user interactions.
 
+**NOTE:** Each of these scenarios contains compromises you would have to weigh against their benefits:
+- Hiding the comments initially will lower engagement from the community.
+- Deferring the loading of Disqus will eliminate the SEO benefits of Disqus.
+
 ### [Infinite scroll](infinite_scroll_template.html)
 
 Removes `<div id="disqus_thread"></div>` from the previous article DOM before reloading Disqus in the new article. Disqus should only appear 1 time on the page. Uses the [`DISQUS.reset()` function](https://help.disqus.com/customer/en/portal/articles/472107-using-disqus-on-ajax-sites) to reload a new Disqus thread after your page's content has updated.
