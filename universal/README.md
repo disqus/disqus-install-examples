@@ -70,8 +70,11 @@ Similar to preloading before a click, load the Disqus [Universal Code](https://d
 Defers loading Disqus until the user has brought comments into view. This is check is triggered after loading, when the user scrolls, and when the window size changes.
 
 #### Site Examples
+- [The A.V. Club](http://www.avclub.com/article/sam-coffey-and-iron-lungs-channel-clash-talk-2-her-251891) (Show after click)
+- [Stab Magazine](http://stabmag.com/news/kelly-slaters-tired-of-margaret-rivers-main-break/) (Show after click)
+- [Highsnobiety](http://www.highsnobiety.com/2017/04/03/supreme-x-north-face-ss17-drop-paris/) (Load after click)
 - [The Atlantic](https://www.theatlantic.com/technology/archive/2017/03/trump-android-tweets/520869/) (Load after click)
-- [The AVClub](http://www.avclub.com/article/sam-coffey-and-iron-lungs-channel-clash-talk-2-her-251891) (Infinite scroll)
+- [Make:](http://makezine.com/2016/06/30/these-custom-night-vision-goggles-dont-even-look-homemade/) (Sidebar)
 
 ## Additional customization
 
