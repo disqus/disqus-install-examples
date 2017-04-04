@@ -46,16 +46,16 @@
 Disqus is designed to load at the bottom of your post content, but it is flexible and can be loaded in a variety of different layouts and with different user interactions.
 
 **NOTE:** Each of these scenarios contains compromises you would have to weigh against their benefits:
-- Hiding the comments initially will lower engagement from the community.
+- Hiding the comments initially will significantly lower engagement from the community.
 - Deferring the loading of Disqus will eliminate the SEO benefits of Disqus.
 
 ### [Infinite scroll](infinite_scroll_template.html)
 
-Removes `<div id="disqus_thread"></div>` from the previous article DOM before reloading Disqus in the new article. Disqus should only appear 1 time on the page. Uses the [`DISQUS.reset()` function](https://help.disqus.com/customer/en/portal/articles/472107-using-disqus-on-ajax-sites) to reload a new Disqus thread after your page's content has updated.
+Removes `<div id="disqus_thread"></div>` from the previous article DOM before reloading Disqus in the new article. Disqus is limited to one instance in the entire DOM at a time. If multiple are included, only one will be loaded. Uses the [`DISQUS.reset()` function](https://help.disqus.com/customer/en/portal/articles/472107-using-disqus-on-ajax-sites) to reload a new Disqus thread after your page's content has updated.
 
 ### [Load after click](load_after_click_template.html)
 
-Use an event handler like `.onclick` to refer to an anonymous function where you can place the Disqus [Universal Code](https://disqus.com/admin/universalcode/).
+Uses an event handler like `.onclick` to refer to an anonymous function where you can place the Disqus [Universal Code](https://disqus.com/admin/universalcode/).
 
 ### [Show after click](show_after_click_template.html)
 
