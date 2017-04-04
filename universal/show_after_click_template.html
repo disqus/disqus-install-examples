@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="//media.disquscdn.com/disqus-install-examples/assets/css/kube.min.css" />
+<style>
+    #container {
+        margin: auto;
+        max-width: 1128px;
+        padding: 12px;
+    }
+
+    #disqus_thread {
+        margin-top: 10px;
+    }
+</style>
+</head>
+
+<body>
+<div id="container">
+
+    <h1>Show After Click Template</h1>
+
+    <p>Loads Disqus initially into a <code>&lt;div/&gt;</code> that is hidden by default, and is revealed after user interaction like a click.</p>
+
+    <button id="disqus-button">Show Comments</button>
+
+    <div id="disqus-container" style="display: none">
+        <div id="disqus_thread"></div>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+
+</div>
+
+<script>
+    /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+
+    var disqus_config = function () {
+        this.page.url = 'https://example.com';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'example'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.title = 'Title example';
+    };
+
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//kaffepausen.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+
+    // Hide and show the container div upon click where you have placed Disqus
+    var isHidden = true;
+    var doc = window.document;
+    var button = doc.getElementById('disqus-button');
+    var container = doc.getElementById('disqus-container');
+    button.onclick = function (event) {
+        container.style.display = isHidden ? 'block' : 'none'
+        button.innerHTML = isHidden ? 'Hide Comments' : 'Show Comments';
+        isHidden = !isHidden;
+    }
+</script>
+</body>
+</html>
