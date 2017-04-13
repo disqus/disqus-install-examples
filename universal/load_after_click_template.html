@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="//media.disquscdn.com/disqus-install-examples/assets/css/kube.min.css" />
+<style>
+    #container {
+        margin: auto;
+        max-width: 1128px;
+        padding: 12px;
+    }
+
+    #disqus_thread {
+        margin-top: 10px;
+    }
+</style>
+</head>
+
+<body>
+<div id="container">
+    <h1>Load After Click Template</h1>
+
+    <p>Loads the Disqus comments <em>after</em> the user interacts with the button.</p>
+
+    <div id="disqus_thread">
+        <button id="disqus-button">Load Comments</button>
+    </div>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+
+    var disqus_config = function () {
+        this.page.url = 'https://example.com';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'example'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.title = 'Title example';
+    };
+
+    var loadDisqus = function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//kaffepausen.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    };
+
+    var doc = window.document;
+    var button = doc.getElementById('disqus-button');
+    button.onclick = loadDisqus;
+
+</script>
+</body>
+</html>
