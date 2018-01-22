@@ -29,6 +29,7 @@ Usage will depend on the platform. See each platform's README.md file which will
 - [Postach.io](/postachio)
 - [TYPO3](/typo3)
 - [Pattern by Etsy](/pattern)
+- [HelpDocs](/helpdocs)
 
 ### Native apps
 
