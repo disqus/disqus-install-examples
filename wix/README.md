@@ -1,5 +1,7 @@
 # Wix installation instructions
 
+**Note: Disqus is not yet supported on the new Wix blog, and can only be installed on the old blog. Visit Wix Support for more information**
+
 1. Click **My Blog** icon ("B") in the left sidebar of the Editor.
 2. Click **Blog Pages**.
 3. Click **Single Post**.
