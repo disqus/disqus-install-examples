@@ -1,6 +1,6 @@
 # Bludit installation instructions
 
-[Bludit](https://www.bludit.com) out of the box came with Disqus plugin. You need to enable and configure with the `shortname` tag.
+[Bludit](https://www.bludit.com) out of the box comes with Disqus plugin. You need to enable and configure with the `shortname` tag.
 
 1. In the sidebar of your admin area, select **Plugins**.
 2. Search for `Disqus` plugin.
