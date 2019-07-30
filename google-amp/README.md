@@ -61,20 +61,29 @@ Disqus for Accelerated Mobile Pages (AMP) is a fast-loading, optimized Disqus ex
     ```
 
 2. Refer to the `amp-iframe` [documentation](https://www.ampproject.org/docs/reference/extended/amp-iframe.html) and add the required `amp-iframe` script to your document's `<head>`. :
-    
+
     ```html
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 
     ```
 
-3. Place the following `<amp-iframe>` element anywhere within the `<body>` of your AMP page. It will likely make sense to place it at the end of your article content, where ever you would your audience should engage further after reading.
+3. Place the following `<amp-iframe>` element anywhere within the `<body>` of your AMP page. It will likely make sense to place it at the end of your article content, where ever your audience should engage further after reading.
 
     ```html
     <amp-iframe width=600 height=140
                 layout="responsive"
                 sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
                 resizable
-                src="https://example.com/amp#hash">
+                src="https://example.com/amp#hash"
+    >
+        <div overflow
+             tabindex=0
+             role=button
+             aria-label="Load more"
+             style="display:block;font-size:12px;font-weight:500;font-family:Helvetica Neue, arial, sans-serif;text-align:center;line-height:1.1;padding:12px 16px;border-radius:4px;background:rgba(29,47,58,0.6);color:rgb(255,255,255)"
+        >
+            Load more
+        </div>
     </amp-iframe>
     ```
 
