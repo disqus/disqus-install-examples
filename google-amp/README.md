@@ -65,7 +65,7 @@ Disqus for Accelerated Mobile Pages (AMP) is a fast-loading, optimized Disqus ex
 
     ```
 
-3. Place the following `<amp-iframe>` element anywhere within the `<body>` of your AMP page. It will likely make sense to place it at the end of your article content, where ever you would your audience should engage further after reading.
+3. Place the following `<amp-iframe>` element anywhere within the `<body>` of your AMP page. It will likely make sense to place it at the end of your article content, where ever your audience should engage further after reading.
 
     ```html
     <amp-iframe width=600 height=140
