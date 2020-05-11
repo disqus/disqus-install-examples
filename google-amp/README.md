@@ -106,7 +106,7 @@ Disqus for Accelerated Mobile Pages (AMP) is a fast-loading, optimized Disqus ex
     width="auto"
     height="20"
     layout="fixed-height"
-    src="//EXAMPLE.disqus.com/count-data.json?url=YOUR_URL&url=OTHER_URL&identifier=THREAD_IDENTIFIER&identifier=FOURTH_THREAD_IDENTIFIER"
+    src="//EXAMPLE.disqus.com/count-data.json?url=YOUR_URL"
 >
     <template type="amp-mustache">
         <span>
@@ -116,6 +116,6 @@ Disqus for Accelerated Mobile Pages (AMP) is a fast-loading, optimized Disqus ex
 </amp-list>
 ```
 
-Replace `EXAMPLE` with your forum shortname and the `url` and `identifier` query string parameters with the thread identifiers or urls of the threads you're trying to get comment counts of. You can fetch comment counts for multiple threads by sending all of their urls or identifiers in the call to `count-data.json`. 
+Make sure to replace `EXAMPLE` with your forum shortname and `YOUR_URL` with the url for the thread that you'd like to get comment count data for. A thread's `identifier` can also be passed as a parameter to `count-data.json`. Multiple urls and identifiers can be passed in a single call to `count-data.json`. For example, using `//EXAMPLE.disqus.com/count-data.json?url=FIRST_URL&url=SECOND_URL&identifier=THIRD_IDENTIFIER&identifier=FOURTH_IDENTIFIER` in the `src` of the `<amp-list>` element will fetch comment counts for four threads. Note that passing both the `url` and `identifier` for a single thread will cause the thread to be returned twice.  
 
-The endpoint will return a JSON object containing a key called `items`, which is an array of thread objects. Those objects will contain `url` (the url for the thread), `identifier` (the thread identifier or thread identifier url used to fetch the thread), and `comments` (the number of comments on the thread). The contents of the template can be customized as needed.
+The endpoint will return a JSON object containing a key called `items`, which contains the requested thread objects. Each thread object will contain `url`, `identifier`, and `comments` (the number of comments on the thread). The contents of the template can be customized as needed.
