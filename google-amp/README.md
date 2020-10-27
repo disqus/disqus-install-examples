@@ -10,7 +10,7 @@ Disqus for Accelerated Mobile Pages (AMP) is a fast-loading, optimized Disqus ex
 
 ## How to install
 
-1. Create and host the following Universal Code file on a different domain than where you intend to load Disqus for AMP. This will be the URL that you will provide to the `src` attribute in step 3 below.Make sure to replace the EXAMPLE inside `s.src` with the name of your own forum.
+1. Create and host the following Universal Code file on a different domain than where you intend to load Disqus for AMP. This will be the URL that you will provide to the `src` attribute in step 3 below. Make sure to replace the EXAMPLE inside `s.src` with the name of your own forum.
 
     ```html
     <div id="disqus_thread"></div>
@@ -119,3 +119,74 @@ Disqus for Accelerated Mobile Pages (AMP) is a fast-loading, optimized Disqus ex
 Make sure to replace `EXAMPLE` with your forum shortname and `YOUR_URL` with the url for the thread that you'd like to get comment count data for. A thread's `identifier` can also be passed as a parameter to `count-data.json`. Multiple urls and identifiers can be passed in a single call to `count-data.json`. For example, using `//EXAMPLE.disqus.com/count-data.json?url=FIRST_URL&url=SECOND_URL&identifier=THIRD_IDENTIFIER&identifier=FOURTH_IDENTIFIER` in the `src` of the `<amp-list>` element will fetch comment counts for four threads. Note that passing both the `url` and `identifier` for a single thread will cause the thread to be returned twice.  
 
 The endpoint will return a JSON object containing a key called `items`, which contains the requested thread objects. Each thread object will contain `url`, `identifier`, and `comments` (the number of comments on the thread). The contents of the template can be customized as needed.
+
+## How to add standalone recommendations (optional)
+
+Adding standalone recommendations is very similar to adding a comment thread to an AMP page. Recommendations can be added to any page, with or without comments on the same page.
+
+1. Create and host the following Universal Code file on a different domain than where you intend to load Disqus Recommendations for AMP. This will be the URL that you will provide to the `src` attribute in step 3 below. Make sure to replace the EXAMPLE inside `s.src` with the name of your own forum.
+
+    ```html
+    <div id="disqus_recommendations"></div>
+    <script>
+    window.addEventListener('message', receiveMessage, false);
+    function receiveMessage(event)
+    {
+        if (event.data) {
+            var msg;
+            try {
+                msg = JSON.parse(event.data);
+            } catch (err) {
+                // Do nothing
+            }
+            if (!msg)
+                return false;
+            if (msg.name === 'resize' || msg.name === 'rendered') {
+                window.parent.postMessage({
+                  sentinel: 'amp',
+                  type: 'embed-size',
+                  height: msg.data.height
+                }, '*');
+            }
+        }
+    }
+    </script>
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+         */
+        var disqus_config = function () {
+            this.page.url = window.location;
+        };
+        (function() {  // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = '//EXAMPLE.disqus.com/recommendations.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    ```
+
+2. Skip this step if you already have comments on the same page loading recommendations. Refer to the `amp-iframe` [documentation](https://www.ampproject.org/docs/reference/extended/amp-iframe.html) and add the required `amp-iframe` script to your document's `<head>`. :
+
+    ```html
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+
+    ```
+
+3. Place the following `<amp-iframe>` element anywhere within the `<body>` of your AMP page.
+
+    ```html
+    <amp-iframe width=600 height=140
+                layout="responsive"
+                sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
+                resizable
+                src="https://example.com/amp">
+      <div overflow tabindex=0 role=button aria-label="Show recommendations">Show recommendations</div>
+    </amp-iframe>
+    ```
+
+4. Add the new domain as a Trusted Domain in your Admin > Settings > [Advanced](https://disqus.com/admin/settings/advanced/). 
+
+5. Change your recommendations settings to only load in the standalone position in your Admin > Settings > [Recommendations](https://disqus.com/admin/settings/recommendations/).
