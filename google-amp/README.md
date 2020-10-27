@@ -93,23 +93,29 @@ Disqus for Accelerated Mobile Pages (AMP) is a fast-loading, optimized Disqus ex
 
 ## How to add comment counts (optional)
 
-1. Place the following script to the `<head>` of your AMP page. This will allow you to use the [`<amp-script>` element](https://amp.dev/documentation/examples/components/amp-script/).
+1. Place the following scripts to the `<head>` of your AMP page. This will allow you to use [`<amp-list>` elements](https://amp.dev/documentation/components/amp-list/) to fetch comment counts and [`amp-mustache` templates](https://amp.dev/documentation/examples/components/amp-mustache/) to dynamically add the comment counts to your site.
     ```html
-    <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
     ```
     
-2. Add the following script to the `<body>` of your AMP page. Make sure to replace EXAMPLE with your forum's shortname.
-    ```html
-    <script id="dsq-count-scr" src="//EXAMPLE.disqus.com/count.js" target="amp-script" async></script>
-    ```
-    
-3. Create an element to contain a thread's comment count. The example below will only get the comment count for the thread on that page, but can be configured to get the comment count of another thread. Your implementation of this step will vary a lot depending on how you want the comment count to look and which threads you want to get the comment counts of. Make sure to replace PAGE_IDENTIFIER with the thread's identifier.
-    ```html
-    <div>
-        <amp-script layout="container" script="dsq-count-scr">
-            <a href="#disqus_thread" data-disqus-identifier="PAGE_IDENTIFIER"></a>
-        </amp-script>
-    </div>
-    ```
+2. Add an `<amp-list>` to the `<body>` of your AMP page containing a call to EXAMPLE.disqus.com/count-data.json and the template that will be used to display the comment counts. You can follow this example:
 
-For more general information on adding comment counts you can take a look at the [Disqus help page](https://help.disqus.com/en/articles/1717274-adding-comment-count-links-to-your-home-page).
+```
+<amp-list
+    width="auto"
+    height="20"
+    layout="fixed-height"
+    src="//EXAMPLE.disqus.com/count-data.json?url=YOUR_URL"
+>
+    <template type="amp-mustache">
+        <span>
+            <a href="{{url}}">{{comments}} comments</a>
+        </span>
+    </template>
+</amp-list>
+```
+
+Make sure to replace `EXAMPLE` with your forum shortname and `YOUR_URL` with the url for the thread that you'd like to get comment count data for. A thread's `identifier` can also be passed as a parameter to `count-data.json`. Multiple urls and identifiers can be passed in a single call to `count-data.json`. For example, using `//EXAMPLE.disqus.com/count-data.json?url=FIRST_URL&url=SECOND_URL&identifier=THIRD_IDENTIFIER&identifier=FOURTH_IDENTIFIER` in the `src` of the `<amp-list>` element will fetch comment counts for four threads. Note that passing both the `url` and `identifier` for a single thread will cause the thread to be returned twice.  
+
+The endpoint will return a JSON object containing a key called `items`, which contains the requested thread objects. Each thread object will contain `url`, `identifier`, and `comments` (the number of comments on the thread). The contents of the template can be customized as needed.
