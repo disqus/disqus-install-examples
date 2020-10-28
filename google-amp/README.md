@@ -156,7 +156,7 @@ Adding standalone recommendations is very similar to adding a comment thread to 
          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
          */
-        var disqus_config = function () {
+        var disqus_recommendations_config = function () {
             this.page.url = window.location;
         };
         (function() {  // DON'T EDIT BELOW THIS LINE
