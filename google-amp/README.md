@@ -154,10 +154,12 @@ Adding standalone recommendations is very similar to adding a comment thread to 
     <script>
         /**
          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  THIS STEP IS OPTIONAL, BUT WILL HELP PREVENT ANY DISCUSSIONS ON THE CURRENT PAGE FROM BEING INCLUDED IN THE RECOMMENDATIONS.
          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
          */
         var disqus_recommendations_config = function () {
-            this.page.url = window.location;
+            this.page.url = window.location;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = window.location.hash; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         (function() {  // DON'T EDIT BELOW THIS LINE
             var d = document, s = d.createElement('script');
