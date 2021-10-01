@@ -28,7 +28,7 @@ Disqus for Accelerated Mobile Pages (AMP) is a fast-loading, optimized Disqus ex
             if (!msg)
                 return false;
 
-            if (msg.name === 'resize' || msg.name === 'rendered') {
+            if ((msg.name === 'resize' || msg.name === 'rendered') && msg.data.height >= 100) {
                 window.parent.postMessage({
                   sentinel: 'amp',
                   type: 'embed-size',
@@ -141,7 +141,7 @@ Adding standalone recommendations is very similar to adding a comment thread to 
             }
             if (!msg)
                 return false;
-            if (msg.name === 'resize' || msg.name === 'rendered') {
+            if ((msg.name === 'resize' || msg.name === 'rendered') && msg.data.height >= 100) {
                 window.parent.postMessage({
                   sentinel: 'amp',
                   type: 'embed-size',
