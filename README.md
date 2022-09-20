@@ -13,6 +13,7 @@ Usage will depend on the platform. See each platform's README.md file which will
 - [Blogger](/blogger/)
 - [Drupal](/drupal/)
 - [Joomla](/joomla/)
+- [Kentico](/kentico/)
 - [Movable Type](/movabletype/)
 - [Squarespace](/squarespace/)
 - [Tumblr](/tumblr/)
